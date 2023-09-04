@@ -15,6 +15,7 @@ namespace Escola_POO_BASE.Classes
         //string de conexão                                Informações CHUMBADAS - HARDCODE
         private static string _strConexao = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=EscolaN22;Integrated Security=True";
 
+
         //Variáveis de uso (podem ou não serem usadas ao decorrer do projeto)
         public SqlConnection conexao = new SqlConnection(_strConexao);
         public SqlCommand comando; //armazenar a query(insert, select, date) - recebe o comando a ser executado 
