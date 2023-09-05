@@ -38,16 +38,18 @@ namespace Escola_POO_BASE.Telas
             if (_userLogado is Aluno)
             {
                 cadastroDeAlunosToolStripMenuItem.Visible = false;
-                TslNomeUserLogado.Text = "Aluno";
+                toolStripStatusLabel3.Text = "Aluno";
             }
             else 
             { 
                 cadastroDeAlunosToolStripMenuItem.Visible= true;
-                TslNomeUserLogado.Text = "Professor";
+                toolStripStatusLabel3.Text = "Professor";
             }
 
-            TslDataHora.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm");
-            LblSaudacao.Text = $"Bem vindo(a), {_userLogado.Nome}!";
+            TslDataHora.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm:ss");
+            TmrRelogio.Interval = 1000;
+            TmrRelogio.Enabled = true;
+
             TslNomeUserLogado.Text = _userLogado.Nome;
             TslEmailUserLogado.Text = _userLogado.Email;
         }
@@ -65,6 +67,10 @@ namespace Escola_POO_BASE.Telas
             tlCadastraAluno.ShowDialog();
         }
 
-     
+
+        private void TmrRelogio_Tick(object sender, EventArgs e)
+        {
+            TslDataHora.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm:ss");
+        }
     }
 }

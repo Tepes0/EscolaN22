@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.LblSaudacao = new System.Windows.Forms.Label();
+            this.components = new System.ComponentModel.Container();
             this.SspRodape = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.Tsl = new System.Windows.Forms.ToolStripStatusLabel();
@@ -36,24 +36,17 @@
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.TslEmailUserLogado = new System.Windows.Forms.ToolStripStatusLabel();
             this.TslStatusPerfilUsuario = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.TslDataHora = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TsiAlterarSenha = new System.Windows.Forms.ToolStripMenuItem();
             this.adiconarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroDeAlunosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TmrRelogio = new System.Windows.Forms.Timer(this.components);
             this.SspRodape.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // LblSaudacao
-            // 
-            this.LblSaudacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblSaudacao.Location = new System.Drawing.Point(12, 38);
-            this.LblSaudacao.Name = "LblSaudacao";
-            this.LblSaudacao.Size = new System.Drawing.Size(638, 273);
-            this.LblSaudacao.TabIndex = 0;
-            this.LblSaudacao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SspRodape
             // 
@@ -64,10 +57,11 @@
             this.toolStripStatusLabel2,
             this.TslEmailUserLogado,
             this.TslStatusPerfilUsuario,
+            this.toolStripStatusLabel3,
             this.TslDataHora});
-            this.SspRodape.Location = new System.Drawing.Point(0, 333);
+            this.SspRodape.Location = new System.Drawing.Point(0, 548);
             this.SspRodape.Name = "SspRodape";
-            this.SspRodape.Size = new System.Drawing.Size(662, 22);
+            this.SspRodape.Size = new System.Drawing.Size(842, 22);
             this.SspRodape.TabIndex = 1;
             this.SspRodape.Text = "statusStrip1";
             // 
@@ -108,16 +102,25 @@
             // 
             // TslStatusPerfilUsuario
             // 
+            this.TslStatusPerfilUsuario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TslStatusPerfilUsuario.Name = "TslStatusPerfilUsuario";
-            this.TslStatusPerfilUsuario.Size = new System.Drawing.Size(118, 17);
-            this.TslStatusPerfilUsuario.Text = "toolStripStatusLabel3";
+            this.TslStatusPerfilUsuario.Size = new System.Drawing.Size(40, 17);
+            this.TslStatusPerfilUsuario.Text = "Perfil:";
+            // 
+            // toolStripStatusLabel3
+            // 
+            this.toolStripStatusLabel3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripStatusLabel3.ForeColor = System.Drawing.Color.DarkGreen;
+            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(39, 17);
+            this.toolStripStatusLabel3.Text = "Aluno";
             // 
             // TslDataHora
             // 
             this.TslDataHora.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TslDataHora.Name = "TslDataHora";
             this.TslDataHora.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.TslDataHora.Size = new System.Drawing.Size(205, 17);
+            this.TslDataHora.Size = new System.Drawing.Size(375, 17);
             this.TslDataHora.Spring = true;
             this.TslDataHora.Text = "15/08/2023    21:45";
             this.TslDataHora.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -129,7 +132,7 @@
             this.adiconarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(662, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(842, 25);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -164,14 +167,18 @@
             this.cadastroDeAlunosToolStripMenuItem.Text = "Cadastro de Alunos";
             this.cadastroDeAlunosToolStripMenuItem.Click += new System.EventHandler(this.cadastroDeAlunosToolStripMenuItem_Click);
             // 
+            // TmrRelogio
+            // 
+            this.TmrRelogio.Tick += new System.EventHandler(this.TmrRelogio_Tick);
+            // 
             // TelaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(662, 355);
+            this.ClientSize = new System.Drawing.Size(842, 570);
             this.Controls.Add(this.SspRodape);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.LblSaudacao);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "TelaPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -187,8 +194,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label LblSaudacao;
         private System.Windows.Forms.StatusStrip SspRodape;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel Tsl;
@@ -202,5 +207,7 @@
         private System.Windows.Forms.ToolStripMenuItem adiconarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastroDeAlunosToolStripMenuItem;
         private System.Windows.Forms.ToolStripStatusLabel TslStatusPerfilUsuario;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
+        private System.Windows.Forms.Timer TmrRelogio;
     }
 }
