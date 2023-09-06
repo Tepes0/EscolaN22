@@ -87,6 +87,9 @@ namespace Escola_POO_BASE.Telas
             DgvUsuarios.ClearSelection();
             BtnConfirmar.Enabled = true;
             BtnAlterar.Enabled = false;
+            CbbBuscar.SelectedIndex = 0;  
+            TxtBuscar.Focus();
+
         }
 
         //método para carregar o DgvUsuarios com os dados da Lista
@@ -255,6 +258,11 @@ namespace Escola_POO_BASE.Telas
             List<Aluno> listaAlunosFiltrada = Aluno.Buscar(_alunos, CbbBuscar.SelectedIndex, TxtBuscar.Text);
             CarregaDgvUsuarios(listaAlunosFiltrada);    
 
+        }
+
+        private void TxtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            BtnBuscar.PerformClick();   
         }
     }
 }

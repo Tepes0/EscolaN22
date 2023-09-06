@@ -110,7 +110,7 @@
             // toolStripStatusLabel3
             // 
             this.toolStripStatusLabel3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripStatusLabel3.ForeColor = System.Drawing.Color.DarkGreen;
+            this.toolStripStatusLabel3.ForeColor = System.Drawing.Color.Green;
             this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
             this.toolStripStatusLabel3.Size = new System.Drawing.Size(39, 17);
             this.toolStripStatusLabel3.Text = "Aluno";
@@ -120,7 +120,7 @@
             this.TslDataHora.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TslDataHora.Name = "TslDataHora";
             this.TslDataHora.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.TslDataHora.Size = new System.Drawing.Size(375, 17);
+            this.TslDataHora.Size = new System.Drawing.Size(424, 17);
             this.TslDataHora.Spring = true;
             this.TslDataHora.Text = "15/08/2023    21:45";
             this.TslDataHora.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -148,7 +148,7 @@
             // TsiAlterarSenha
             // 
             this.TsiAlterarSenha.Name = "TsiAlterarSenha";
-            this.TsiAlterarSenha.Size = new System.Drawing.Size(154, 22);
+            this.TsiAlterarSenha.Size = new System.Drawing.Size(180, 22);
             this.TsiAlterarSenha.Text = "Alterar Senha";
             this.TsiAlterarSenha.Click += new System.EventHandler(this.TsiAlterarSenha_Click);
             // 

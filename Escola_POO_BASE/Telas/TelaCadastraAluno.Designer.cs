@@ -46,10 +46,10 @@
             this.TxtId = new System.Windows.Forms.TextBox();
             this.DgvUsuarios = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.CbbBuscar = new System.Windows.Forms.ComboBox();
-            this.TxtBuscar = new System.Windows.Forms.TextBox();
             this.BtnBuscar = new System.Windows.Forms.Button();
+            this.TxtBuscar = new System.Windows.Forms.TextBox();
+            this.CbbBuscar = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.GpbCadastraALuno.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvUsuarios)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -244,14 +244,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Painel de Busca";
             // 
-            // label6
+            // BtnBuscar
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(15, 44);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 18);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Buscar por:";
+            this.BtnBuscar.Location = new System.Drawing.Point(614, 38);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(75, 36);
+            this.BtnBuscar.TabIndex = 3;
+            this.BtnBuscar.Text = "Buscar";
+            this.BtnBuscar.UseVisualStyleBackColor = true;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
+            // 
+            // TxtBuscar
+            // 
+            this.TxtBuscar.Location = new System.Drawing.Point(385, 38);
+            this.TxtBuscar.Name = "TxtBuscar";
+            this.TxtBuscar.Size = new System.Drawing.Size(199, 24);
+            this.TxtBuscar.TabIndex = 2;
+            this.TxtBuscar.TextChanged += new System.EventHandler(this.TxtBuscar_TextChanged);
             // 
             // CbbBuscar
             // 
@@ -266,22 +275,14 @@
             this.CbbBuscar.Size = new System.Drawing.Size(245, 26);
             this.CbbBuscar.TabIndex = 1;
             // 
-            // TxtBuscar
+            // label6
             // 
-            this.TxtBuscar.Location = new System.Drawing.Point(382, 44);
-            this.TxtBuscar.Name = "TxtBuscar";
-            this.TxtBuscar.Size = new System.Drawing.Size(199, 24);
-            this.TxtBuscar.TabIndex = 2;
-            // 
-            // BtnBuscar
-            // 
-            this.BtnBuscar.Location = new System.Drawing.Point(614, 38);
-            this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(75, 36);
-            this.BtnBuscar.TabIndex = 3;
-            this.BtnBuscar.Text = "Buscar";
-            this.BtnBuscar.UseVisualStyleBackColor = true;
-            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(15, 44);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(85, 18);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Buscar por:";
             // 
             // TelaCadastraAluno
             // 

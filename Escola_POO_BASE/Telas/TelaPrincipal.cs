@@ -61,10 +61,10 @@ namespace Escola_POO_BASE.Telas
         }
 
         private void cadastroDeAlunosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
+        {            
             TelaCadastraAluno tlCadastraAluno = new TelaCadastraAluno(_alunos, _userLogado, _alunoSelecionado);
-            tlCadastraAluno.ShowDialog();
+            tlCadastraAluno.MdiParent = this;
+            tlCadastraAluno.Show(); 
         }
 
 
