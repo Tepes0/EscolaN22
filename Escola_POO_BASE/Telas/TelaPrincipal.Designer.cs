@@ -44,8 +44,16 @@
             this.adiconarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroDeAlunosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TmrRelogio = new System.Windows.Forms.Timer(this.components);
+            this.PlResumoAlunos = new System.Windows.Forms.Panel();
+            this.LblAlunosRemovidos = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.LblAlunosAtivos = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.LblQtdAlunos = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SspRodape.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.PlResumoAlunos.SuspendLayout();
             this.SuspendLayout();
             // 
             // SspRodape
@@ -59,7 +67,7 @@
             this.TslStatusPerfilUsuario,
             this.toolStripStatusLabel3,
             this.TslDataHora});
-            this.SspRodape.Location = new System.Drawing.Point(0, 548);
+            this.SspRodape.Location = new System.Drawing.Point(0, 481);
             this.SspRodape.Name = "SspRodape";
             this.SspRodape.Size = new System.Drawing.Size(842, 22);
             this.SspRodape.TabIndex = 1;
@@ -148,7 +156,7 @@
             // TsiAlterarSenha
             // 
             this.TsiAlterarSenha.Name = "TsiAlterarSenha";
-            this.TsiAlterarSenha.Size = new System.Drawing.Size(180, 22);
+            this.TsiAlterarSenha.Size = new System.Drawing.Size(154, 22);
             this.TsiAlterarSenha.Text = "Alterar Senha";
             this.TsiAlterarSenha.Click += new System.EventHandler(this.TsiAlterarSenha_Click);
             // 
@@ -171,13 +179,91 @@
             // 
             this.TmrRelogio.Tick += new System.EventHandler(this.TmrRelogio_Tick);
             // 
+            // PlResumoAlunos
+            // 
+            this.PlResumoAlunos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.PlResumoAlunos.Controls.Add(this.LblAlunosRemovidos);
+            this.PlResumoAlunos.Controls.Add(this.label5);
+            this.PlResumoAlunos.Controls.Add(this.LblAlunosAtivos);
+            this.PlResumoAlunos.Controls.Add(this.label3);
+            this.PlResumoAlunos.Controls.Add(this.LblQtdAlunos);
+            this.PlResumoAlunos.Controls.Add(this.label1);
+            this.PlResumoAlunos.Dock = System.Windows.Forms.DockStyle.Left;
+            this.PlResumoAlunos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlResumoAlunos.Location = new System.Drawing.Point(0, 25);
+            this.PlResumoAlunos.Name = "PlResumoAlunos";
+            this.PlResumoAlunos.Size = new System.Drawing.Size(174, 456);
+            this.PlResumoAlunos.TabIndex = 4;
+            // 
+            // LblAlunosRemovidos
+            // 
+            this.LblAlunosRemovidos.AutoSize = true;
+            this.LblAlunosRemovidos.ForeColor = System.Drawing.Color.Red;
+            this.LblAlunosRemovidos.Location = new System.Drawing.Point(48, 311);
+            this.LblAlunosRemovidos.Name = "LblAlunosRemovidos";
+            this.LblAlunosRemovidos.Size = new System.Drawing.Size(51, 20);
+            this.LblAlunosRemovidos.TabIndex = 10;
+            this.LblAlunosRemovidos.Text = "label6";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(22, 275);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(131, 36);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Alunos removidos:\r\n\r\n";
+            // 
+            // LblAlunosAtivos
+            // 
+            this.LblAlunosAtivos.AutoSize = true;
+            this.LblAlunosAtivos.ForeColor = System.Drawing.Color.Red;
+            this.LblAlunosAtivos.Location = new System.Drawing.Point(48, 203);
+            this.LblAlunosAtivos.Name = "LblAlunosAtivos";
+            this.LblAlunosAtivos.Size = new System.Drawing.Size(51, 20);
+            this.LblAlunosAtivos.TabIndex = 8;
+            this.LblAlunosAtivos.Text = "label4";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(22, 163);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 36);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Alunos ativos:\r\n\r\n";
+            // 
+            // LblQtdAlunos
+            // 
+            this.LblQtdAlunos.AutoSize = true;
+            this.LblQtdAlunos.ForeColor = System.Drawing.Color.Red;
+            this.LblQtdAlunos.Location = new System.Drawing.Point(48, 90);
+            this.LblQtdAlunos.Name = "LblQtdAlunos";
+            this.LblQtdAlunos.Size = new System.Drawing.Size(51, 20);
+            this.LblQtdAlunos.TabIndex = 6;
+            this.LblQtdAlunos.Text = "label2";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(8, 52);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(155, 18);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Quantidade de alunos:\r\n";
+            // 
             // TelaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(842, 570);
+            this.ClientSize = new System.Drawing.Size(842, 503);
+            this.Controls.Add(this.PlResumoAlunos);
             this.Controls.Add(this.SspRodape);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "TelaPrincipal";
@@ -188,6 +274,8 @@
             this.SspRodape.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.PlResumoAlunos.ResumeLayout(false);
+            this.PlResumoAlunos.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,5 +297,12 @@
         private System.Windows.Forms.ToolStripStatusLabel TslStatusPerfilUsuario;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
         private System.Windows.Forms.Timer TmrRelogio;
+        private System.Windows.Forms.Panel PlResumoAlunos;
+        private System.Windows.Forms.Label LblAlunosRemovidos;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label LblAlunosAtivos;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label LblQtdAlunos;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -20,12 +20,12 @@ namespace Escola_POO_BASE.Telas
     {
         private Aluno _alunoSelecionado;
         private Usuario _userLogado;
-        private List<Aluno> _alunos;
-        public TelaPrincipal(Usuario usuarioLogado, List<Aluno> alunos)
+        private List<Usuario> _aluno;
+        public TelaPrincipal(Usuario usuarioLogado, List<Usuario> aluno)
         {
             InitializeComponent();
             _userLogado = usuarioLogado;
-            _alunos = alunos;   
+            _aluno = aluno;
         }
          
         private void TelaPrincipal_Load(object sender, EventArgs e)
@@ -49,6 +49,10 @@ namespace Escola_POO_BASE.Telas
             TslDataHora.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm:ss");
             TmrRelogio.Interval = 1000;
             TmrRelogio.Enabled = true;
+            var qtdAlunos = _aluno.Count;
+            LblQtdAlunos.Text = $"{qtdAlunos}";
+            //LblAlunosAtivos.Text = 
+            //LblAlunosRemovidos.Text = 
 
             TslNomeUserLogado.Text = _userLogado.Nome;
             TslEmailUserLogado.Text = _userLogado.Email;
@@ -66,8 +70,6 @@ namespace Escola_POO_BASE.Telas
             tlCadastraAluno.MdiParent = this;
             tlCadastraAluno.Show(); 
         }
-
-
         private void TmrRelogio_Tick(object sender, EventArgs e)
         {
             TslDataHora.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm:ss");

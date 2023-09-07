@@ -20,6 +20,7 @@ namespace Escola_POO_BASE.Telas
         private Professor _userLogado;
 
         public TelaCadastraAluno(List<Aluno> alunos, Usuario usuarioLogado, Aluno alunoSelecionado)
+
         {
             InitializeComponent();
             _alunoSelecionado = alunoSelecionado;   
@@ -103,7 +104,6 @@ namespace Escola_POO_BASE.Telas
                 if (!aluno.Ativo)
                     DgvUsuarios.Rows[DgvUsuarios.Rows.Count-1].DefaultCellStyle.BackColor = Color.Red;
             }
-
         }
 
         private void BtnNovo_Click(object sender, EventArgs e)
@@ -132,11 +132,10 @@ namespace Escola_POO_BASE.Telas
                     //                 MessageBoxButtons.OK,
                     //                 MessageBoxIcon.Information);
                   
-
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message,
+                    MessageBox.Show(ex.Message, 
                                     "Erro",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Error);
